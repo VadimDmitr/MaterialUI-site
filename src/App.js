@@ -13,6 +13,7 @@ import {
   CardMedia,
   CardContent,
   CardActions,
+  BottomNavigation,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme } from "@mui/material/styles";
@@ -193,7 +194,7 @@ function App() {
                     borderRadius: "15px", // Set preference
                     boxShadow:
                       "20px 20px 60px #bebebe, -20px -20px 90px #ffffff",
-                      border: "1px solid #000000",
+                    border: "1px solid #000000",
                   }}
                 >
                   <CardMedia /*class="cardMedia"*/
@@ -232,6 +233,19 @@ function App() {
           </Grid>
         </Container>
       </main>
+      <footer>
+        <Typography variant="h6" align="center" gutterBottom>
+          Imagined and Realized by Vadim D.
+        </Typography>
+<BottomNavigation 
+value={value}
+onChange={handleChange}
+/*className={classes.root}*/
+>
+ 
+</BottomNavigation>
+
+      </footer>
     </>
   );
 }
