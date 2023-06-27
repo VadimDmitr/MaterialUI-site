@@ -302,13 +302,18 @@ function App() {
         </Container>
       </main>
       <footer>
-        <Typography variant="h6" align="center" gutterBottom>
+        <Typography variant="h6" align="center" gutterBottom sx={{
+            paddingTop: "2.50%",
+          }}>
           Imagined and Realized by Vadim D.
         </Typography>
         <BottomNavigation
           value={value}
           onChange={handleChange}
           /*className={classes.root}*/
+          sx={{
+            paddingTop: ".30%",
+          }}
         >
           <BottomNavigationAction
             label="Home"
@@ -344,6 +349,9 @@ function App() {
           color="textSecondary"
           component="p"
           variant="subtitle1"
+          sx={{
+            paddingTop: "0.60%",
+          }}
         >
           Web Developer Blog React js Material UI site
         </Typography>
