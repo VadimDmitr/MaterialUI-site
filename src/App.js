@@ -133,7 +133,7 @@ function App() {
         <Box mt={8}>
           <Paper /*className="mainFeaturesPost"*/
             sx={{
-              backgroundImage: `url('https://source.unsplash.com/featured')`,
+              backgroundImage: `url('https://picsum.photos/1200/800')`,
               position: "relative",
               color: theme.palette.common.white,
               marginBottom: theme.spacing(8),
@@ -266,7 +266,7 @@ function App() {
                   }}
                 >
                   <CardMedia /*class="cardMedia"*/
-                    image="https://source.unsplash.com/featured"
+                    image="https://picsum.photos/1200/800"
                     title="Image title"
                     sx={{
                       paddingTop: "56.25%",
