@@ -26,7 +26,7 @@ Make sure you have the following software installed on your local machine:
    `npm install`
 
 4. Start the development server:
-   `npm run dev`
+   `npm start`
 
 Your site should now be accessible at `http://localhost:3000`.
 
