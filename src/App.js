@@ -14,8 +14,16 @@ import {
   CardContent,
   CardActions,
   BottomNavigation,
+  BottomNavigationAction,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+
+import FolderIcon from "@mui/icons-material/Folder";
+import HomeIcon from "@mui/icons-material/Home";
+import RestoreIcon from "@mui/icons-material/Restore";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+
 import { useTheme } from "@mui/material/styles";
 import LayerIcon from "@mui/icons-material/Layers";
 import PlayCircleFilled from "@mui/icons-material/PlayCircleFilled";
@@ -24,6 +32,11 @@ const cards = [1, 2, 3, 4, 5, 6];
 
 function App() {
   const theme = useTheme();
+  const [value, setValue] = React.useState("recents");
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   return (
     <>
       <AppBar position="fixed">
@@ -237,14 +250,41 @@ function App() {
         <Typography variant="h6" align="center" gutterBottom>
           Imagined and Realized by Vadim D.
         </Typography>
-<BottomNavigation 
-value={value}
-onChange={handleChange}
-/*className={classes.root}*/
->
- 
-</BottomNavigation>
+        <BottomNavigation
+          value={value}
+          onChange={handleChange}
+          /*className={classes.root}*/
+        >
+          <BottomNavigationAction
+            label="Home"
+            value="home"
+            icon={<HomeIcon />}
+          />
 
+          <BottomNavigationAction
+            label="Recents"
+            value="recents"
+            icon={<RestoreIcon />}
+          />
+
+          <BottomNavigationAction
+            label="Favorits"
+            value="favorits"
+            icon={<FavoriteIcon />}
+          />
+
+          <BottomNavigationAction
+            label="Nearby"
+            value="nearby"
+            icon={<LocationOnIcon />}
+          />
+          <BottomNavigationAction
+            label="Folder"
+            value="folder"
+            icon={<FolderIcon />}
+          />
+        </BottomNavigation>
+        <Typography align="center" color="textSecondary" component="p" variant="subtitle1">Web Developer Blog React js Material UI site</Typography>
       </footer>
     </>
   );
