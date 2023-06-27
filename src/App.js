@@ -54,7 +54,7 @@ function App() {
 
       <main>
         <Box mt={8}>
-          <Paper /*mainFeaturesPost*/
+          <Paper /*className="mainFeaturesPost"*/
             sx={{
               backgroundImage: `url('https://source.unsplash.com/featured')`,
               position: "relative",
@@ -84,10 +84,10 @@ function App() {
                       padding: theme.spacing(3),
                     }}
                   >
-                    <div /*mainFeaturesPostContent*/
+                    <div /*className="mainFeaturesPostContent"*/
                       sx={{
                         position: "relative",
-                        padding: theme.spacing(3),
+                        padding: theme.spacing(6),
                       }}
                     >
                       <Typography
@@ -96,12 +96,12 @@ function App() {
                         color="inherit"
                         gutterBottom
                         sx={{
-                          marginTop: theme.spacing(4),
+                          marginTop: theme.spacing(8),
                         }}
                       >
-                        Web Developer
+                        Web Developer Blog
                       </Typography>
-                      <Typography component="h5" color="inherit" paragraph>
+                      <Typography component="h5" variant="h6" color="inherit" gutterBottom paragraph>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Ut ullamcorper ut sem nec faucibus. Sed auctor augue et
                         neque commodo, a feugiat nisl fringilla. Phasellus quis
@@ -112,7 +112,7 @@ function App() {
                       variant="contained"
                       color="secondary"
                       sx={{
-                        marginBottom: theme.spacing(6),
+                        marginBottom: theme.spacing(8),
                       }}
                     >
                       Learn more
@@ -122,6 +122,28 @@ function App() {
               </Grid>
             </Container>
           </Paper>
+          <div /*className="mainContent"*/>
+            <Container maxWidth="md">
+              <Typography
+                variant="h2"
+                align="center"
+                color="textPrimary"
+                gutterBottom
+              >
+                Web Developer Blog
+              </Typography>
+              <Typography
+                variant="h5"
+                align="center"
+                color="textSecondary"
+                paragraph
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                ullamcorper ut sem nec faucibus. Sed auctor augue et neque
+                commodo, a feugiat nisl fringilla. Phasellus quis elit metus.
+              </Typography>
+            </Container>
+          </div>
         </Box>
       </main>
     </>
