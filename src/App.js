@@ -15,6 +15,12 @@ import {
   CardActions,
   BottomNavigation,
   BottomNavigationAction,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  TextField,
+  DialogActions,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -36,6 +42,17 @@ function App() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  }
+
+
+  const handleClose = () => {
+    setOpen(false);
+  }
 
   return (
     <>
@@ -61,10 +78,48 @@ function App() {
               Web Developer Blog
             </Typography>
             <Box mr={3}>
-              <Button color="inherit" variant="outlined">
+              <Button
+                color="inherit"
+                variant="outlined"
+                onClick={handleClickOpen}
+              >
                 {" "}
                 Log In{" "}
               </Button>
+              <Dialog
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="form-dialog-title"
+              >
+                <DialogTitle id="form-dialog-title">Log In</DialogTitle>
+                <DialogContent>
+                  <DialogContentText> Log In to See Videos </DialogContentText>
+                  <TextField
+                    autoFocus
+                    margin="dense"
+                    id="email adress"
+                    label="Email Adress"
+                    type="email"
+                    fullWidth
+                  />
+                  <TextField
+                    autoFocus
+                    margin="dense"
+                    id="password"
+                    label="Password"
+                    type="password"
+                    fullWidth
+                  />
+                </DialogContent>
+                <DialogActions>
+                  <Button onClick={handleClose} color="primary">
+                    Cancel
+                  </Button>
+                  <Button onClick={handleClose} color="primary">
+                    Log In
+                  </Button>
+                </DialogActions>
+              </Dialog>
             </Box>
             <Button color="secondary" variant="contained">
               {" "}
@@ -284,7 +339,14 @@ function App() {
             icon={<FolderIcon />}
           />
         </BottomNavigation>
-        <Typography align="center" color="textSecondary" component="p" variant="subtitle1">Web Developer Blog React js Material UI site</Typography>
+        <Typography
+          align="center"
+          color="textSecondary"
+          component="p"
+          variant="subtitle1"
+        >
+          Web Developer Blog React js Material UI site
+        </Typography>
       </footer>
     </>
   );
