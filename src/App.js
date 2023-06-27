@@ -142,6 +142,16 @@ function App() {
                 ullamcorper ut sem nec faucibus. Sed auctor augue et neque
                 commodo, a feugiat nisl fringilla. Phasellus quis elit metus.
               </Typography>
+              <div /*className="mainButtons"*/>
+                <Grid /*className="mainButtons"*/ container spacing={5} justifyContent="center">
+                  <Grid item>
+                    <Button variant="contained" color="primary">Start Now</Button>
+                    </Grid>
+                    <Grid item>
+                    <Button variant="outlined" color="primary">Learn More</Button>
+                  </Grid>
+                </Grid>
+              </div>
             </Container>
           </div>
         </Box>
