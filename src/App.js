@@ -47,12 +47,11 @@ function App() {
 
   const handleClickOpen = () => {
     setOpen(true);
-  }
-
+  };
 
   const handleClose = () => {
     setOpen(false);
-  }
+  };
 
   return (
     <>
@@ -302,9 +301,14 @@ function App() {
         </Container>
       </main>
       <footer>
-        <Typography variant="h6" align="center" gutterBottom sx={{
+        <Typography
+          variant="h6"
+          align="center"
+          gutterBottom
+          sx={{
             paddingTop: "2.50%",
-          }}>
+          }}
+        >
           Imagined and Realized by Vadim D.
         </Typography>
         <BottomNavigation
@@ -322,15 +326,15 @@ function App() {
           />
 
           <BottomNavigationAction
-            label="Recents"
-            value="recents"
-            icon={<RestoreIcon />}
+            label="Favorites"
+            value="favories"
+            icon={<FavoriteIcon />}
           />
 
           <BottomNavigationAction
-            label="Favorits"
-            value="favorits"
-            icon={<FavoriteIcon />}
+            label="Recents"
+            value="recents"
+            icon={<RestoreIcon />}
           />
 
           <BottomNavigationAction
